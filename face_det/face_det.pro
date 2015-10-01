@@ -13,6 +13,8 @@ TEMPLATE = app
 
 INCLUDEPATH += /usr/local/include
 INCLUDEPATH += /usr/local/include/opencv
+INCLUDEPATH += /usr/local/include/tesseract
+INCLUDEPATH += /usr/include/leptonica
 
 LIBS += -L/usr/local/lib \
   -lopencv_calib3d \
@@ -36,7 +38,10 @@ LIBS += -L/usr/local/lib \
   -lrt \
   -lpthread \
   -lm \
-  -ldl
+  -ldl \
+  -ltesseract \
+  -llept \
+  -lpthread
 
 CONFIG += c++11
 
